@@ -1,5 +1,4 @@
-let menu = document.getElementsByClassName('menu__item');
-arrMenu = Array.from(menu);
+arrMenu = Array.from(document.getElementsByClassName('menu__item'));
 let cash = [];
 
 arrMenu.forEach((elem) => {                   //Критерий поиска - вложенность. Если вложенность есть, то это не ссылка.
@@ -16,7 +15,6 @@ arrMenu.forEach((elem) => {                   //Критерий поиска - 
                 cash[0].className = 'menu menu_sub';
                 cash[0] = elem.children[1];
                 elem.children[1].className = 'menu menu_sub menu_active';
-                return false;
             }
         }
     }
